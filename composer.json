@@ -1,14 +1,21 @@
 {
-  "name": "Riverstone/module-infinite-scroll",
+  "name": "riverstone/infinite-scroll",
   "version": "1.0.0",
-  "description": "N/A",
+  "description": "Infinite Scroll Extension automatically loads the product catalogue without reloading the page",
+   "minimum-stability": "stable",
   "type": "magento2-module",
   "require": {
     "magento/framework": "*"
   },
-  "license": [
-    "Proprietary"
-  ],
+   "authors": [
+        {
+            "name": "Riverstone Technology Unlimited",
+            "email": "support@riverstonetech.com",
+            "homepage": "https://www.riverstonetech.com",
+            "role": "Technical Support"
+        }
+    ],
+  "license": "MIT",
   "autoload": {
     "files": [
       "registration.php"
