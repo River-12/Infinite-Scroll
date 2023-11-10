@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="content">
+            <block class="Riverstone\InfiniteScroll\Block\Scroll" name="river.infinitescroll"
+                   template="Riverstone_InfiniteScroll::scroll.phtml" ifconfig="riverstone_scroll/general/use_in_advanced_search">
+            </block>
+        </referenceBlock>
+    </body>
+</page>

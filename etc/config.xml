@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <riverstone_scroll>
+            <general>
+                <enable>1</enable>
+                <loader_text>Loading...</loader_text>
+                <end_page_text>You have reached the end</end_page_text>
+                <display_page_no>1</display_page_no>
+                <no_of_tiles>4</no_of_tiles>
+                <display_back_button>1</display_back_button>
+                <use_in_catalog>1</use_in_catalog>
+                <use_in_advanced_search>1</use_in_advanced_search>
+                <use_in_search>1</use_in_search>
+                <loader_button_text>Next</loader_button_text>
+                <loader_button_color>fffff</loader_button_color>
+                <back_text>Top</back_text>
+                <back_button_color>fffff</back_button_color>
+                <loader_type>1</loader_type>
+            </general>
+        </riverstone_scroll>
+    </default>
+</config>

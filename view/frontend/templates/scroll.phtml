@@ -1,0 +1,53 @@
+<?php
+
+/**
+ * @var Scroll $block
+ */
+
+use Riverstone\InfiniteScroll\Block\Scroll;
+
+$pageNumber = 100 / ($block->getPageNo() + 1);
+?>
+
+<?php if ($block->getModuleEnable()): ?>
+    <script type="text/x-magento-init">
+        {
+            "*": {
+                "Scroll":{
+                "LoaderType":<?= /* @noEscape */
+                $block->getLoaderType(); ?>,
+                "endPageText" :"<?= /* @noEscape */
+                $block->getEndPageText(); ?>"
+                    }
+                }
+            }
+
+    </script>
+    <div id="scroll-product-button" class="scroll-product-button">
+        <?php if ($block->getLoaderType()): ?>
+            <!-- Load more product button -->
+            <button id="scroll-button-link" class="scroll-button-link"> <?= /* @noEscape */
+                $block->getLoaderButtonTxt(); ?> </button>
+        <?php else: ?>
+            <!-- Loader  -->
+            <div class="scroll-loader" id="scroll-loader"></div>
+        <?php endif; ?>
+    </div>
+    <?php if ($block->getBackButtonEnable()): ?>
+        <div class="back-to-top">
+            <br>
+            <button id="back-button" class="back-button"> <?= /* @noEscape */
+                $block->getBackButtonTxt(); ?>
+            </button>
+        </div>
+    <?php endif; ?>
+<?php endif; ?>
+<style>
+    :root {
+        --loader-color: <?= /* @noEscape */ $block->getLoaderButtonColor() ? $block->getLoaderButtonColor():'fffff'; ?>;
+        --back-color: <?= /* @noEscape */ $block->getBackButtonColor() ? $block->getBackButtonColor():'fffff'; ?>;
+        --pages-display: <?= /* @noEscape */ $block->getModuleEnable() ? $block->escapeHtml(__('none')) :
+                                $block->escapeHtml(__('block'));?>;
+        --pages-no: <?= /* @noEscape */ $block->getModuleEnable() ? $pageNumber.'%': '100%/5' ; ?>;
+    }
+</style>

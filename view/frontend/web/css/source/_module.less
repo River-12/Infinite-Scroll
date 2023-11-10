@@ -1,0 +1,95 @@
+& when (@media-common = true) {
+  .scroll-button-link {
+    background: var(--loader-color) !important;
+  }
+
+  .back-button {
+    background: var(--back-color) !important;
+    white-space: pre-line;
+  }
+
+  .toolbar {
+    .pages .items {
+      display: var(--pages-display) !important;
+    }
+
+    .field {
+      .control {
+        display: var(--pages-display) !important;
+      }
+
+      .label {
+        display: var(--pages-display) !important;
+      }
+
+      .limiter-text {
+        display: var(--pages-display) !important;
+      }
+    }
+  }
+
+  .page-main {
+    .columns {
+      .column.main {
+        .scroll-loader {
+          -ms-transform: translateZ(0);
+          -webkit-animation-delay: -.16s;
+          -webkit-transform: translateZ(0);
+          animation-delay: -.16s;
+          color: grey;
+          .lib-font-size(6);
+          margin: 0 auto;
+          position: relative;
+          text-indent: -9999em;
+          transform: translateZ(0);
+
+          &,
+          &:before,
+          &:after {
+            -webkit-animation: load7 1.8s infinite ease-in-out;
+            -webkit-animation-fill-mode: both;
+            animation: load7 1.8s infinite ease-in-out;
+            animation-fill-mode: both;
+            border-radius: 50%;
+            height: 2.5em;
+            width: 2.5em;
+          }
+
+          &:before {
+            -webkit-animation-delay: -.32s;
+            animation-delay: -.32s;
+            content: '';
+            left: -3.5em;
+            position: absolute;
+            top: 0;
+          }
+
+          &:after {
+            content: '';
+            left: 3.5em;
+            position: absolute;
+            top: 0;
+          }
+        }
+
+        .back-to-top {
+          align-items: center;
+          display: flex;
+          justify-content: center;
+        }
+
+        .scroll-product-button {
+          align-items: center;
+          display: flex;
+          justify-content: center;
+        }
+
+        .products-grid {
+          .product-item {
+            width: var(--pages-no);
+          }
+        }
+      }
+    }
+  }
+}

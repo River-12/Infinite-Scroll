@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="riverstone_scroll" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Infinite Scroll</label>
+            <tab>riverstoneinfotech</tab>
+            <resource>Riverstone_InfiniteScroll::configuration</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>General Configuration</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="loader_type" translate="label" type="select" sortOrder="2" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Loader type</label>
+                    <source_model>Riverstone\InfiniteScroll\Model\Config\Source\LoaderType</source_model>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+                <field id="loader_button_text" translate="label" type="text" sortOrder="3" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Text on button</label>
+                    <depends>
+                        <field id="enable">1</field>
+                        <field id="loader_type">1</field>
+                    </depends>
+                </field>
+                <field id="loader_button_color" translate="label" sortOrder="4" type="text" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Button Color</label>
+                    <validate>required-entry</validate>
+                    <frontend_model>Riverstone\InfiniteScroll\Model\Config\Colorpicker</frontend_model>
+                    <depends>
+                        <field id="enable">1</field>
+                        <field id="loader_type">1</field>
+                    </depends>
+                </field>
+                <field id="end_page_text" translate="label" type="text" sortOrder="5" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>End page text</label>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+                <field id="no_of_tiles" translate="label" type="text" sortOrder="7" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Number of products in a row</label>
+                    <comment>Note : Allow size is 1-7</comment>
+                    <validate>validate-digits validate-not-negative-number validate-digits-range digits-range-1-7
+                    </validate>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+                <field id="display_back_button" translate="label" type="select" sortOrder="8" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Display Back to top button</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+                <field id="back_text" translate="label" type="text" sortOrder="9" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Text on button</label>
+                    <depends>
+                        <field id="enable">1</field>
+                        <field id="display_back_button">1</field>
+                    </depends>
+                </field>
+                <field id="back_button_color" translate="label" sortOrder="10" type="text" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Button Color</label>
+                    <validate>required-entry</validate>
+                    <frontend_model>Riverstone\InfiniteScroll\Model\Config\Colorpicker</frontend_model>
+                    <depends>
+                        <field id="enable">1</field>
+                        <field id="display_back_button">1</field>
+                    </depends>
+                </field>
+                <field id="use_in_catalog" translate="label" type="select" sortOrder="11" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Use in Category</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+                <field id="use_in_search" translate="label" type="select" sortOrder="12" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Use in Search</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+                <field id="use_in_advanced_search" translate="label" type="select" sortOrder="13" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Use in Advance search</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
