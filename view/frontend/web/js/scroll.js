@@ -28,7 +28,8 @@ define([
             if (typeof initialUrl === 'undefined') {
                 $("#scroll-button-link").hide();
                 $("#scroll-loader").hide();
-                $("#back-button").hide();
+                $("#back-button").show();
+                $(self.options.scrollProductButton).html('<em>' + self.options.endPageText + '</em>');
             }else{
                 if (self.options.LoaderType) {
 
