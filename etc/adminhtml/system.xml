@@ -2,6 +2,9 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
+        <tab id="riverstoneinfotech" translate="label" sortOrder="10">
+                <label>Riverstone</label>
+        </tab>
         <section id="riverstone_scroll" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
             <class>separator-top</class>
             <label>Infinite Scroll</label>
@@ -14,83 +17,8 @@
                        showInStore="1">
                     <label>Module Enable</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                </field>
-                <field id="loader_type" translate="label" type="select" sortOrder="2" showInDefault="1"
-                       showInWebsite="1"
-                       showInStore="1">
-                    <label>Loader type</label>
-                    <source_model>Riverstone\InfiniteScroll\Model\Config\Source\LoaderType</source_model>
-                    <depends>
-                        <field id="enable">1</field>
-                    </depends>
-                </field>
-                <field id="loader_button_text" translate="label" type="text" sortOrder="3" showInDefault="1"
-                       showInWebsite="1"
-                       showInStore="1">
-                    <label>Text on button</label>
-                    <depends>
-                        <field id="enable">1</field>
-                        <field id="loader_type">1</field>
-                    </depends>
-                </field>
-                <field id="loader_button_color" translate="label" sortOrder="4" type="text" showInDefault="1"
-                       showInWebsite="1" showInStore="1">
-                    <label>Button Color</label>
-                    <validate>required-entry</validate>
-                    <frontend_model>Riverstone\InfiniteScroll\Model\Config\Colorpicker</frontend_model>
-                    <depends>
-                        <field id="enable">1</field>
-                        <field id="loader_type">1</field>
-                    </depends>
-                </field>
-                <field id="end_page_text" translate="label" type="text" sortOrder="5" showInDefault="1"
-                       showInWebsite="1"
-                       showInStore="1">
-                    <label>End page text</label>
-                    <depends>
-                        <field id="enable">1</field>
-                    </depends>
-                </field>
-                <field id="no_of_tiles" translate="label" type="text" sortOrder="7" showInDefault="1"
-                       showInWebsite="1"
-                       showInStore="1">
-                    <label>Number of products in a row</label>
-                    <comment>Note : Allow size is 1-7</comment>
-                    <validate>validate-digits validate-not-negative-number validate-digits-range digits-range-1-7
-                    </validate>
-                    <depends>
-                        <field id="enable">1</field>
-                    </depends>
-                </field>
-                <field id="display_back_button" translate="label" type="select" sortOrder="8" showInDefault="1"
-                       showInWebsite="1"
-                       showInStore="1">
-                    <label>Display Back to top button</label>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <depends>
-                        <field id="enable">1</field>
-                    </depends>
-                </field>
-                <field id="back_text" translate="label" type="text" sortOrder="9" showInDefault="1"
-                       showInWebsite="1"
-                       showInStore="1">
-                    <label>Text on button</label>
-                    <depends>
-                        <field id="enable">1</field>
-                        <field id="display_back_button">1</field>
-                    </depends>
-                </field>
-                <field id="back_button_color" translate="label" sortOrder="10" type="text" showInDefault="1"
-                       showInWebsite="1" showInStore="1">
-                    <label>Button Color</label>
-                    <validate>required-entry</validate>
-                    <frontend_model>Riverstone\InfiniteScroll\Model\Config\Colorpicker</frontend_model>
-                    <depends>
-                        <field id="enable">1</field>
-                        <field id="display_back_button">1</field>
-                    </depends>
-                </field>
-                <field id="use_in_catalog" translate="label" type="select" sortOrder="11" showInDefault="1"
+                </field>                
+                <field id="use_in_catalog" translate="label" type="select" sortOrder="2" showInDefault="1"
                        showInWebsite="1"
                        showInStore="1">
                     <label>Use in Category</label>
@@ -99,7 +27,82 @@
                         <field id="enable">1</field>
                     </depends>
                 </field>
-                <field id="use_in_search" translate="label" type="select" sortOrder="12" showInDefault="1"
+                <field id="catalog_loader_type" translate="label" type="select" sortOrder="3" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Loader type</label>
+                    <source_model>Riverstone\InfiniteScroll\Model\Config\Source\LoaderType</source_model>
+                    <depends>
+                        <field id="use_in_catalog">1</field>
+                    </depends>
+                </field>
+                <field id="catalog_loader_button_text" translate="label" type="text" sortOrder="4" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Text on button</label>
+                    <depends>
+                        <field id="use_in_catalog">1</field>
+                        <field id="catalog_loader_type">1</field>
+                    </depends>
+                </field>
+                <field id="catalog_loader_button_color" translate="label" sortOrder="5" type="text" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Button Color</label>
+                    <validate>required-entry</validate>
+                    <frontend_model>Riverstone\InfiniteScroll\Model\Config\Colorpicker</frontend_model>
+                    <depends>
+                        <field id="use_in_catalog">1</field>
+                        <field id="catalog_loader_type">1</field>
+                    </depends>
+                </field>
+                <field id="catalog_end_page_text" translate="label" type="text" sortOrder="6" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>End page text</label>
+                    <depends>
+                        <field id="use_in_catalog">1</field>
+                    </depends>
+                </field>
+                <field id="catalog_no_of_tiles" translate="label" type="text" sortOrder="7" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Number of products in a row</label>
+                    <comment>Note : Allow size is 1-7</comment>
+                    <validate>validate-digits validate-not-negative-number validate-digits-range digits-range-1-7
+                    </validate>
+                    <depends>
+                        <field id="use_in_catalog">1</field>
+                    </depends>
+                </field>
+                <field id="catalog_display_back_button" translate="label" type="select" sortOrder="8" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Display Back to top button</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="use_in_catalog">1</field>
+                    </depends>
+                </field>
+                <field id="catalog_back_text" translate="label" type="text" sortOrder="9" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Text on button</label>
+                    <depends>
+                        <field id="use_in_catalog">1</field>
+                        <field id="catalog_display_back_button">1</field>
+                    </depends>
+                </field>
+                <field id="catalog_back_button_color" translate="label" sortOrder="10" type="text" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Button Color</label>
+                    <validate>required-entry</validate>
+                    <frontend_model>Riverstone\InfiniteScroll\Model\Config\Colorpicker</frontend_model>
+                    <depends>
+                        <field id="use_in_catalog">1</field>
+                        <field id="catalog_display_back_button">1</field>
+                    </depends>
+                </field>
+                <field id="use_in_search" translate="label" type="select" sortOrder="11" showInDefault="1"
                        showInWebsite="1"
                        showInStore="1">
                     <label>Use in Search</label>
@@ -108,13 +111,163 @@
                         <field id="enable">1</field>
                     </depends>
                 </field>
-                <field id="use_in_advanced_search" translate="label" type="select" sortOrder="13" showInDefault="1"
+                <field id="search_loader_type" translate="label" type="select" sortOrder="12" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Loader type</label>
+                    <source_model>Riverstone\InfiniteScroll\Model\Config\Source\LoaderType</source_model>
+                    <depends>
+                        <field id="use_in_search">1</field>
+                    </depends>
+                </field>
+                <field id="search_loader_button_text" translate="label" type="text" sortOrder="13" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Text on button</label>
+                    <depends>
+                        <field id="use_in_search">1</field>
+                        <field id="search_loader_type">1</field>
+                    </depends>
+                </field>
+                <field id="search_loader_button_color" translate="label" sortOrder="14" type="text" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Button Color</label>
+                    <validate>required-entry</validate>
+                    <frontend_model>Riverstone\InfiniteScroll\Model\Config\Colorpicker</frontend_model>
+                    <depends>
+                        <field id="use_in_search">1</field>
+                        <field id="search_loader_type">1</field>
+                    </depends>
+                </field>
+                <field id="search_end_page_text" translate="label" type="text" sortOrder="15" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>End page text</label>
+                    <depends>
+                        <field id="use_in_search">1</field>
+                    </depends>
+                </field>
+                <field id="search_no_of_tiles" translate="label" type="text" sortOrder="16" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Number of products in a row</label>
+                    <comment>Note : Allow size is 1-7</comment>
+                    <validate>validate-digits validate-not-negative-number validate-digits-range digits-range-1-7
+                    </validate>
+                    <depends>
+                        <field id="use_in_search">1</field>
+                    </depends>
+                </field>
+                <field id="search_display_back_button" translate="label" type="select" sortOrder="17" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Display Back to top button</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="use_in_search">1</field>
+                    </depends>
+                </field>
+                <field id="search_back_text" translate="label" type="text" sortOrder="18" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Text on button</label>
+                    <depends>
+                        <field id="use_in_search">1</field>
+                        <field id="search_display_back_button">1</field>
+                    </depends>
+                </field>
+                <field id="search_back_button_color" translate="label" sortOrder="19" type="text" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Button Color</label>
+                    <validate>required-entry</validate>
+                    <frontend_model>Riverstone\InfiniteScroll\Model\Config\Colorpicker</frontend_model>
+                    <depends>
+                        <field id="use_in_search">1</field>
+                        <field id="search_display_back_button">1</field>
+                    </depends>
+                </field>
+                <field id="use_in_advanced_search" translate="label" type="select" sortOrder="20" showInDefault="1"
                        showInWebsite="1"
                        showInStore="1">
                     <label>Use in Advance search</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <depends>
                         <field id="enable">1</field>
+                    </depends>
+                </field>
+                 <field id="advance_search_loader_type" translate="label" type="select" sortOrder="21" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Loader type</label>
+                    <source_model>Riverstone\InfiniteScroll\Model\Config\Source\LoaderType</source_model>
+                    <depends>
+                        <field id="use_in_advanced_search">1</field>
+                    </depends>
+                </field>
+                <field id="advance_search_loader_button_text" translate="label" type="text" sortOrder="22" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Text on button</label>
+                    <depends>
+                        <field id="use_in_advanced_search">1</field>
+                        <field id="advance_search_loader_type">1</field>
+                    </depends>
+                </field>
+                <field id="advance_search_loader_button_color" translate="label" sortOrder="23" type="text" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Button Color</label>
+                    <validate>required-entry</validate>
+                    <frontend_model>Riverstone\InfiniteScroll\Model\Config\Colorpicker</frontend_model>
+                    <depends>
+                        <field id="use_in_advanced_search">1</field>
+                        <field id="advance_search_loader_type">1</field>
+                    </depends>
+                </field>
+                <field id="advance_search_end_page_text" translate="label" type="text" sortOrder="24" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>End page text</label>
+                    <depends>
+                        <field id="use_in_advanced_search">1</field>
+                    </depends>
+                </field>
+                <field id="advance_search_no_of_tiles" translate="label" type="text" sortOrder="25" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Number of products in a row</label>
+                    <comment>Note : Allow size is 1-7</comment>
+                    <validate>validate-digits validate-not-negative-number validate-digits-range digits-range-1-7
+                    </validate>
+                    <depends>
+                        <field id="use_in_advanced_search">1</field>
+                    </depends>
+                </field>
+                <field id="advance_search_display_back_button" translate="label" type="select" sortOrder="26" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Display Back to top button</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="use_in_advanced_search">1</field>
+                    </depends>
+                </field>
+                <field id="advance_search_back_text" translate="label" type="text" sortOrder="27" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Text on button</label>
+                    <depends>
+                        <field id="use_in_advanced_search">1</field>
+                        <field id="advance_search_display_back_button">1</field>
+                    </depends>
+                </field>
+                <field id="advance_search_back_button_color" translate="label" sortOrder="28" type="text" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Button Color</label>
+                    <validate>required-entry</validate>
+                    <frontend_model>Riverstone\InfiniteScroll\Model\Config\Colorpicker</frontend_model>
+                    <depends>
+                        <field id="use_in_advanced_search">1</field>
+                        <field id="advance_search_display_back_button">1</field>
                     </depends>
                 </field>
             </group>
