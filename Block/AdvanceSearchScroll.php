@@ -9,17 +9,17 @@ use Magento\Framework\View\Element\Template\Context;
 use Magento\Store\Model\ScopeInterface;
 use Magento\Store\Model\StoreManagerInterface;
 
-class Scroll extends Template
+class AdvanceSearchScroll extends Template
 {
     public const MODULE_ENABLE = 'riverstone_scroll/general/enable';
-    public const LOADER_TYPE = 'riverstone_scroll/general/loader_type';
-    public const END_PAGE_TEXT = 'riverstone_scroll/general/end_page_text';
-    public const NO_OF_TILES = 'riverstone_scroll/general/no_of_tiles';
-    public const DISPLAY_BACK_BUTTON = 'riverstone_scroll/general/display_back_button';
-    public const LOADER_BUTTON_TEXT = 'riverstone_scroll/general/loader_button_text';
-    public const LOADER_BUTTON_COLOR = 'riverstone_scroll/general/loader_button_color';
-    public const TOP_BUTTON_TEXT = 'riverstone_scroll/general/back_text';
-    public const TOP_BUTTON_COLOR = 'riverstone_scroll/general/back_button_color';
+    public const LOADER_TYPE = 'riverstone_scroll/general/advance_search_loader_type';
+    public const END_PAGE_TEXT = 'riverstone_scroll/general/advance_search_end_page_text';
+    public const NO_OF_TILES = 'riverstone_scroll/general/advance_search_no_of_tiles';
+    public const DISPLAY_BACK_BUTTON = 'riverstone_scroll/general/advance_search_display_back_button';
+    public const LOADER_BUTTON_TEXT = 'riverstone_scroll/general/advance_search_loader_button_text';
+    public const LOADER_BUTTON_COLOR = 'riverstone_scroll/general/advance_search_loader_button_color';
+    public const TOP_BUTTON_TEXT = 'riverstone_scroll/general/advance_search_back_text';
+    public const TOP_BUTTON_COLOR = 'riverstone_scroll/general/advance_search_back_button_color';
 
     /**
      * @var ScopeConfigInterface

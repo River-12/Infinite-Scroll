@@ -3,7 +3,7 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceBlock name="content">
-            <block class="Riverstone\InfiniteScroll\Block\Scroll" name="river.infinitescroll"
+            <block class="Riverstone\InfiniteScroll\Block\CategoryScroll" name="river.infinitescroll"
                    template="Riverstone_InfiniteScroll::scroll.phtml" ifconfig="riverstone_scroll/general/use_in_catalog">
             </block>
         </referenceBlock>

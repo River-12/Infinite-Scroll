@@ -4,20 +4,34 @@
     <default>
         <riverstone_scroll>
             <general>
-                <enable>1</enable>
-                <loader_text>Loading...</loader_text>
-                <end_page_text>You have reached the end</end_page_text>
-                <display_page_no>1</display_page_no>
-                <no_of_tiles>4</no_of_tiles>
-                <display_back_button>1</display_back_button>
+                <enable>1</enable>                
                 <use_in_catalog>1</use_in_catalog>
+                <catalog_end_page_text>You have reached the end</catalog_end_page_text>
+                <catalog_no_of_tiles>4</catalog_no_of_tiles>
+                <catalog_loader_button_text>Next</catalog_loader_button_text>
+                <catalog_loader_button_color>fffff</catalog_loader_button_color>
+                <catalog_back_text>Top</catalog_back_text>
+                <catalog_back_button_color>fffff</catalog_back_button_color>
+                <catalog_loader_type>1</catalog_loader_type>
+                <catalog_display_back_button>1</catalog_display_back_button>
                 <use_in_advanced_search>1</use_in_advanced_search>
+                <advance_search_end_page_text>You have reached the end</advance_search_end_page_text>
+                <advance_search_no_of_tiles>4</advance_search_no_of_tiles>
+                <advance_search_loader_button_text>Next</advance_search_loader_button_text>
+                <advance_search_loader_button_color>fffff</advance_search_loader_button_color>
+                <advance_search_back_text>Top</advance_search_back_text>
+                <advance_search_back_button_color>fffff</advance_search_back_button_color>
+                <advance_search_loader_type>1</advance_search_loader_type>
+                <advance_search_display_back_button>1</advance_search_display_back_button>
                 <use_in_search>1</use_in_search>
-                <loader_button_text>Next</loader_button_text>
-                <loader_button_color>fffff</loader_button_color>
-                <back_text>Top</back_text>
-                <back_button_color>fffff</back_button_color>
-                <loader_type>1</loader_type>
+                <search_end_page_text>You have reached the end</search_end_page_text>
+                <search_no_of_tiles>4</search_no_of_tiles>
+                <search_loader_button_text>Next</search_loader_button_text>
+                <search_loader_button_color>fffff</search_loader_button_color>
+                <search_back_text>Top</search_back_text>
+                <search_back_button_color>fffff</search_back_button_color>
+                <search_loader_type>1</search_loader_type>
+                <search_display_back_button>1</search_display_back_button>
             </general>
         </riverstone_scroll>
     </default>

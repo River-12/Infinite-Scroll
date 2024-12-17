@@ -1,11 +1,4 @@
 <?php
-
-/**
- * @var Scroll $block
- */
-
-use Riverstone\InfiniteScroll\Block\Scroll;
-
 $pageNumber = 100 / ($block->getPageNo() + 1);
 ?>
 
@@ -46,8 +39,8 @@ $pageNumber = 100 / ($block->getPageNo() + 1);
     :root {
         --loader-color: <?= /* @noEscape */ $block->getLoaderButtonColor() ? $block->getLoaderButtonColor():'fffff'; ?>;
         --back-color: <?= /* @noEscape */ $block->getBackButtonColor() ? $block->getBackButtonColor():'fffff'; ?>;
-        --pages-display: <?= /* @noEscape */ $block->getModuleEnable() ? $block->escapeHtml(__('none')) :
-                                $block->escapeHtml(__('block'));?>;
+        --pages-display: <?= /* @noEscape */ $block->getModuleEnable() ? $escaper->escapeHtml(__('none')) :
+                                $escaper->escapeHtml(__('block'));?>;
         --pages-no: <?= /* @noEscape */ $block->getModuleEnable() ? $pageNumber.'%': '100%/5' ; ?>;
     }
 </style>
