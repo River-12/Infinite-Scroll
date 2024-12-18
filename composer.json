@@ -4,9 +4,6 @@
   "description": "Infinite Scroll Extension automatically loads the product catalogue without reloading the page",
    "minimum-stability": "stable",
   "type": "magento2-module",
-  "require": {
-    "magento/framework": "^4.7"
-  },
    "authors": [
         {
             "name": "Riverstone Technology Unlimited",
